@@ -10,9 +10,17 @@ const fetchAllPosts = async () => {
     blogContainer.innerText = '';
     result.forEach((post) => {
         const blogPostContainer = document.createElement('div');
+        blogPostContainer.setAttribute("id", "blogPostContainer");
+
         const blogPostTitle = document.createElement('h1');
+        blogPostTitle.setAttribute("id", "blogPostTitle");
+
         const blogPostAuthor = document.createElement('p');
+        blogPostAuthor.setAttribute("id", "blogPostAuthor");
+        
         const blogPostContent = document.createElement('p');
+        blogPostContent.setAttribute("id", "blogPostContent");
+
         blogPostContainer.append(blogPostTitle, blogPostAuthor, blogPostContent);
         blogContainer.appendChild(blogPostContainer);
 
