@@ -2,27 +2,40 @@
 <html lang="en">
 
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;800&display=swap" rel="stylesheet"> 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/css" href="/public/styles.css">
+    <link rel="stylesheet" href="/public/styles.css">
     <title>Send a post</title>
 </head>
 
 <body>
-    
-    <div id="inputContainer">
-        <label for="title">Title:</label><br>
-        <input type="text" id="titleInput" name="titleInput"><br>
-        
-        <label for="author">Author:</label><br>
-        <input type="text" id="authorInput" name="authorInput"><br>
+    <div id="navBar">
+        <h1 id="cadaware">CADAWARE</h1>
+    </div>
 
-        <label for="content">Content:</label><br>
-        <input type="text" id="contentInput" name="contentInput"><br>
+    <div id="pageTitleContainer">
+        <h1 id="pageTitle">Send a post 📃</h1>
+    </div>
+
+    <div id="inputContainer">
+     <!-- <label for="title">Title:</label><br> -->
+        <input type="text" id="titleInput" name="titleInput" placeholder="Title"><br>
+        
+     <!-- <label for="author">Author:</label><br> -->
+        <input type="text" id="authorInput" name="authorInput" placeholder="Author"><br>
+
+     <!-- <label for="content">Content:</label><br> -->
+        <textarea type="text" id="contentInput" name="contentInput" placeholder="Content"></textarea><br>
         <input type="submit" id="submitButton" value="Submit">
     </div>
 
+    <div id="allBlogsContainer">
+        <h1 id="allBlogsTitle">All the Blogs 📑</h1>
+    </div>
 
     <div id="blogsContainer">
 
