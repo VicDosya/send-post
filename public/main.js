@@ -29,11 +29,16 @@ const fetchAllPosts = async () => {
         blogPostContent.innerText = post.content;
     });
     console.log(result);
+    submitButton.disabled = false;
+    submitButton.style.backgroundColor = '';
 };
 
 fetchAllPosts();
 
 submitButton.addEventListener('click', async () => {
+    submitButton.disabled = true;
+    submitButton.style.backgroundColor = "gray";
+    
     const response = await fetch('/api/posts', {
         method: "post",
         headers: {
@@ -47,6 +52,9 @@ submitButton.addEventListener('click', async () => {
         }),
 
     });
+    titleInput.value = '';
+    authorInput.value = '';
+    contentInput.value = '';
     const result = await response.json();
     console.log(result);
 
