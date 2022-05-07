@@ -65,7 +65,7 @@ submitButton.addEventListener('click', async () => {
         contentInput.style.border = "1px solid #fc3d03";
 
     } else if (result.message == "error_title") {
-        errorMessage.innerText = "❗ Title must have English alphabet, numbers and 3-100 characters.";
+        errorMessage.innerText = "❗ Title can have English alphabet, numbers and must have 3-100 characters.";
         titleInput.style.border = "1px solid #fc3d03";
         authorInput.style.border = "";
         contentInput.style.border = "";
@@ -77,7 +77,7 @@ submitButton.addEventListener('click', async () => {
         contentInput.style.border = "";
 
     } else if (result.message == "error_content") {
-        errorMessage.innerText = "❗ Content can have all characters, symbols, numbers and 3-3,000 characters.";
+        errorMessage.innerText = "❗ Content can have all characters, symbols, numbers and must have 3-3,000 characters.";
         titleInput.style.border = "";
         authorInput.style.border = "";
         contentInput.style.border = "1px solid #fc3d03";

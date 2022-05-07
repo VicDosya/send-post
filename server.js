@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const bodyParser = require('body-parser');
-app.listen(3000, () => console.log('listening at 3000'));
+app.listen(25565, () => console.log('listening at 25565'));
 app.use(bodyParser.json({ type: '*/*' }));
 
 //Serve static files//
@@ -18,7 +18,7 @@ const posts = [];
 
 //validation patterns
 const validPatterns = {
-    title: /^[a-z\d]{3,100}$/i,
+    title: /^[a-z\d ]{3,100}$/i,
     author: /^[a-z ]{3,15}$/i,
     content: /^[a-z\d \W]{3,3000}$/i
 };
