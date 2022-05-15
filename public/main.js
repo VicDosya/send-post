@@ -57,48 +57,51 @@ submitButton.addEventListener('click', async () => {
     const result = await response.json();
 
     //deal with form inputs on error or success + CSS input styling and error messages
+
+    const errorBorder = "1px solid #fc3d03";
+
     if (result.message == "error_all") {
         NoClearForm();
         errorMessage.innerText = "❗ Error on all the inputs.";
-        titleInput.style.border = "1px solid #fc3d03";
-        authorInput.style.border = "1px solid #fc3d03";
-        contentInput.style.border = "1px solid #fc3d03";
+        titleInput.style.border = errorBorder;
+        authorInput.style.border = errorBorder;
+        contentInput.style.border = errorBorder;
 
     } else if (result.message == "error_title") {
         errorMessage.innerText = "❗ Title can have English alphabet, numbers and must have 3-100 characters.";
-        titleInput.style.border = "1px solid #fc3d03";
+        titleInput.style.border = errorBorder;
         authorInput.style.border = "";
         contentInput.style.border = "";
 
     } else if (result.message == "error_author") {
         errorMessage.innerText = "❗ Author must have English alphabet only and 3-15 characters.";
         titleInput.style.border = "";
-        authorInput.style.border = "1px solid #fc3d03";
+        authorInput.style.border = errorBorder;
         contentInput.style.border = "";
 
     } else if (result.message == "error_content") {
         errorMessage.innerText = "❗ Content can have all characters, symbols, numbers and must have 3-3,000 characters.";
         titleInput.style.border = "";
         authorInput.style.border = "";
-        contentInput.style.border = "1px solid #fc3d03";
+        contentInput.style.border = errorBorder;
 
     } else if (result.message == "error_title_author") {
         errorMessage.innerText = "❗ Invalid Title and Author input.";
-        titleInput.style.border = "1px solid #fc3d03";
-        authorInput.style.border = "1px solid #fc3d03";
+        titleInput.style.border = errorBorder;
+        authorInput.style.border = errorBorder;
         contentInput.style.border = "";
 
     } else if (result.message == "error_title_content") {
         errorMessage.innerText = "❗ Invalid Title and Content input.";
-        titleInput.style.border = "1px solid #fc3d03";
+        titleInput.style.border = errorBorder;
         authorInput.style.border = "";
-        contentInput.style.border = "1px solid #fc3d03";
+        contentInput.style.border = errorBorder;
 
     } else if (result.message == "error_author_content") {
         errorMessage.innerText = "❗ Invalid Author and Content input.";
         titleInput.style.border = "";
-        authorInput.style.border = "1px solid #fc3d03";
-        contentInput.style.border = "1px solid #fc3d03";
+        authorInput.style.border = errorBorder;
+        contentInput.style.border = errorBorder;
 
     } else {
         ClearForm();
