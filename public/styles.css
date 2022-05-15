@@ -119,3 +119,9 @@ textarea {
 #blogPostAuthor {
     font-weight: bold;
 }
+
+#errorMessage {
+    color: #fc3d03;
+    font-size: 20px;
+    font-weight: bold;
+}
